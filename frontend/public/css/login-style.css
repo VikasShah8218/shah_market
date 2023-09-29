@@ -1,0 +1,85 @@
+/* body{
+    background: linear-gradient(to right, #33ccff -14%, #cc33ff 100%);
+    font-family: Arial, Helvetica, sans-serif;
+} */
+.login-box{
+    background-color: white;
+    width: fit-content;
+    padding: 50px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 2%;
+}
+.login-box .logo{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.849);
+    margin-bottom: 60px; 
+       
+}
+.login-box .details .form{
+    display: flex;
+    flex-direction: column;
+}
+.login-box .details .form label{
+    font-size: 20px;
+}
+.login-box .details .form input{
+    width: 250px;
+    height: 30px;
+    outline: none;
+    border: none;
+}
+.login-box .details .form .area{
+    border: 1px solid rgba(0, 0, 0, 0.315);
+    margin-bottom: 50px;    
+}
+.login-box .details .form button{
+    width: 250px;
+    height: 35px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+.login-box .forgot{
+    font-size: small;
+    text-decoration: none;
+    float: right;
+    color: rgb(104 82 0);
+    transition: trans.form 0.2s;
+    cursor: pointer;
+}
+.login-box .forgot:hover{
+    trans.form: scale(1.1);
+}
+.login-box .extra{
+    margin-top:20px ;
+    color: rgb(3 116 213);
+}
+.login-box .extra i{
+    transition: trans.form 0.2s;
+}
+.login-box .extra i:hover{
+    trans.form:scale(1.3);
+}
+.login-box .extra .text{
+    font-size: small;
+    color: black;
+}
+
+button{
+    width: max-content;
+    padding: 3%;
+    color: white;
+    background-color: #000000c7;
+    border: none;
+    border-radius:100px; 
+    cursor: pointer;
+    transition: trans.form .2s;
+}
+button:hover{
+   trans.form: scale(1.1);
+   background-color: #000000;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}

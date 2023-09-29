@@ -1,0 +1,17 @@
+.my-button{
+    padding: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    /* border: 1px solid white; */
+    width: fit-content;
+    font-size: 15px ;
+    border-radius:100px ;
+    background-color: blueviolet;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.my-button:hover{
+    transform: scale(1.1);
+    box-shadow: rgba(0, 170, 243, 0.12) 0px 2px 4px 0px, rgba(236, 249, 255, 0.32) 0px 2px 16px 0px;
+}

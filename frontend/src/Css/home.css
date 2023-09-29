@@ -1,0 +1,89 @@
+.home-section-01{
+    height: 600px;
+}
+.front-page{
+    display: flex;
+    justify-content: center;
+   
+    width: 85%;
+    margin: auto;
+    margin-top: 80px;
+    
+}
+.section1{
+    padding: 10px;  
+    /* padding-right: 20px; */
+    color: white;
+}
+.section1 .stock_Text{
+    /* padding: 20px; */
+    color:white;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.section1 .quot{
+    font-size: 20px;
+    color:#8364E2;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.section2 img{
+    height: 535px;
+    width: 630px;
+    border-radius: 50px;
+    /* box-shadow: #ffffff 0px 7px 29px 0px; */
+    box-shadow: rgba(255, 255, 255, 0.15) 0px 48px 100px 0px;
+}
+
+.relative-img{
+    width: 100%;
+    position: relative;
+    top: -780px;
+    opacity: 0.4; 
+    z-index: -10;
+}
+.relative-img img{
+    width: 100%;
+}
+
+
+.index_list{
+    display: flex;
+    margin-top: 50px;
+}
+.index_list .index{
+    padding: 20px;
+    font-size: 20px;
+    border: 1px solid white;
+    transition: 0.2s;
+}
+.index_list .index:hover{
+    box-shadow: rgb(255, 255, 255) 0px 5px 15px;
+    transform: scale(1.1);
+}
+.index_list .index:nth-child(2){
+    margin-left: 50px;
+}
+.index_list .index .change{
+    display: flex;
+
+
+}
+.index_list .index .change span{
+    color: rgb(255, 6, 6);
+    font-weight: bold;
+}
+
+.index_list .index:nth-child(2) .change span{
+    color: rgb(1, 248, 1);
+}

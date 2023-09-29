@@ -1,0 +1,81 @@
+.stockNavBar{
+    width: 85%;
+    margin: auto;
+    margin-top: 80px;
+}
+
+marquee{
+    /* background-color: purple; */
+    /* background-color: #00000059; */
+    background-image: linear-gradient(147deg, #0000008f 0%, #04619f72 74%);
+}
+.main-Stock-present{
+    display: flex;
+
+}
+.Stock-present{
+    margin-top: 20px;
+    border-top: 1px solid rgba(219, 219, 219, 0.433);
+    border-left: 1px solid rgba(219, 219, 219, 0.433);
+    border-right: 1px solid rgba(219, 219, 219, 0.433);
+    border-bottom: 1px solid rgb(219, 219, 219,0.433);
+    padding: 8px;
+}
+.Stock-present .stocks{
+    display:flex;
+    text-decoration: none;
+}
+.Stock-present .stocks .stocklogo{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.Stock-present .stocks .stocklogo img{
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 50%;
+    margin: 0 7px 0 0;
+}
+.Stock-present .stocks .stockName{
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-weight: bolder;
+    color: white;
+
+    margin: 0 5px 0 0;
+}
+
+.Stock-present .stocks .dot{
+    margin: -20px 10px 0 0;
+    color: white;
+    font-weight: bolder;
+    font-size: 30px;
+    opacity: .5;
+}
+
+.Stock-present .stocks .stockPrice{
+    font-family: Arial, Helvetica, sans-serif !important;
+    color: white;
+    margin: 0 6px 0 0 ;
+    font-weight: bold;
+}
+
+.Stock-present .stocks .price-change{
+    font-family: Arial, Helvetica, sans-serif !important;
+    margin: 0 6px 0 0 ;
+    color: rgb(255, 30, 30);
+    font-weight: bold;
+}
+
+.Stock-present .stocks .price-percent{
+    font-family: Arial, Helvetica, sans-serif !important;
+    margin: 0 16px 0 0 ;
+    color: rgb(255, 30, 30);
+    font-weight: bold;
+
+
+}
+
+.Stock-present .stocks .stock-end{
+    border-left: 1px solid rgb(204, 204, 204);
+    margin: 0 16px 0 0 ;
+    
+}

@@ -1,0 +1,48 @@
+import React , { useRef } from 'react'
+import { Link } from 'react-router-dom';
+import {getFromServer} from '../scripts/requests'
+
+export default function login(){
+    
+    const userName = useRef();
+    const password = useRef();
+
+
+   const loginHandel = async() =>{
+        console.log("Testing");
+        const url = "http://localhost:8000/getdata";
+        const res = await getFromServer(url);
+        console.log(res.data)
+
+    }
+   
+    return(
+        <>
+        <div className="login-box">
+            <div className="logo">Mr.Shah</div>
+                <div className="details">
+                    <div className='form' >
+                        
+                        <label for="fname"><i className="fa-solid fa-user"></i> User ID</label>
+                        <input type="text" id="fname" name="userid" placeholder="Type your username" />
+                        <div className="area"></div>
+                        
+                        <label for="lname"><i className="fa-solid fa-lock"></i> Password</label>
+                        <input type="password" id="lname" ref={userName} name="password" placeholder="Your Password" />
+                        <div className="area"></div>
+                        <Link to="/" onClick={loginHandel} ><button type="button"  > <i className="fa-solid fa-right-to-bracket"></i> Login </button></Link>
+                    </div>
+                </div>
+                <div className="forgot">Forgot Password</div>
+                <div className="extra">
+                    <i className="fa-brands fa-twitter"></i>
+                    <i className="fa-brands fa-facebook"></i>
+                    <i className="fa-brands fa-linkedin"></i>
+                <div className="text">You can connect with us</div>
+
+            </div>
+        </div>
+        
+        </>
+    )
+}
