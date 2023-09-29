@@ -70,7 +70,7 @@ def start():
     scheduler = BackgroundScheduler()
     # run this job every 1 hour
     scheduler.add_job(
-        hit_link, trigger=CronTrigger(second="*/2"),
+        hit_link, trigger=CronTrigger(second="*/10"),
         name='Live_Data', max_instances=1
     )
     register_events(scheduler)
