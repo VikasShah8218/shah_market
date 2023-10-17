@@ -1,7 +1,9 @@
 import axios from "axios";
 import { getUserAccessToken } from "./auth";
+// const domain = "localhost:8000"
+const domain = "shah-market-backend.techkingdom.in"
 // import Cookies from "js-cookie";
-window.baseURL = "http://localhost:8000/"
+window.baseURL = `http://${domain}/`
 
 const handleDeniedResponse = () =>{
   
@@ -51,5 +53,5 @@ const postToServer = async (urlPath, data = {}) => {
 export {
   getFromServer,
   postToServer,
- 
+ domain,
 };

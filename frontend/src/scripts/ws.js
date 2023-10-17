@@ -1,13 +1,12 @@
 import { useState } from "react";
-import { postToServer } from "./requests";
-
+import { postToServer , domain } from "./requests";
 
 
 var  socket = null ;
 const makeConn =  async() =>{
     const res = await postToServer("communication/new-connection-req" ,  );
     console.log(res);
-    const socket = new WebSocket(`ws://localhost:8000/ws/data?req_id=${res.data.req_id}&key=${res.data.one_time_key}`);
+    const socket = new WebSocket(`ws://${domain}/ws/data?req_id=${res.data.req_id}&key=${res.data.one_time_key}`);
     socket.onopen = (event) => {
         console.log("Connection ok...");
         console.log(event);

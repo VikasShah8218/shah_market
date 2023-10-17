@@ -28,6 +28,18 @@ header {
 
 .logo {
   cursor: pointer;
+  text-decoration: none;
+  color: white;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-weight: bolder;
+  font-size: 22px;
+  font-stretch: ultra-expanded;
+}
+.logo a{
+  text-decoration: none;
+  text-underline-offset: 0;
+  font-stretch: ultra-expanded;
+
 }
 
 .nav__links a,

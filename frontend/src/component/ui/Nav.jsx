@@ -33,7 +33,8 @@ export default function Navbar(props){
     return(
         <div className='checkIsLogin' id='navbar-scroll'>
             <header>
-                <a className="logo" href="/"><img src="images/logo.svg" alt="logo" /></a>
+                <a className="logo" href="/"> <span>SHAH MARKET</span> </a>
+                
                 <nav>
                     <ul className="nav__links">
                         <li onClick={getHeatMap}><Link to="#">Services</Link></li>
