@@ -20,6 +20,7 @@ from web_sockets.consumers import live_data_to_all
 from asgiref.sync import async_to_sync
 
 def hit_link():
+    print("---------------------test1-------------------------------")
     stock_url  = 'https://www.nseindia.com/api/equity-stockIndices?index=NIFTY%2050'
     headers = {
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
@@ -35,9 +36,17 @@ def hit_link():
         'Upgrade-Insecure-Requests':"1",
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
         }
+    print("---------------------test2-------------------------------")
+    
     try:
+        print("---------------------test3-------------------------------")
+
         response = requests.get(stock_url, headers=headers)
+        print("---------------------test3-------------------------------")
+
         nse_data = response.json()
+        print("---------------------test4-------------------------------")
+
         # async_to_sync(live_data_to_all)(nse_data)
         print("OK----------------")
         print(f"==> Live Data : - {datetime.now()}")
@@ -51,4 +60,6 @@ class Command(BaseCommand):
     help = '** This will update theaters data from theaters.json to database **'
   
     def handle(self, *args, **kwargs): 
+        print("---------------------test0-------------------------------")
+
         hit_link()
