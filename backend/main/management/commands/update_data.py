@@ -20,6 +20,7 @@ from web_sockets.consumers import live_data_to_all
 from asgiref.sync import async_to_sync
 
 def hit_link():
+    print(requests.get("https://www.google.com"))
     print("---------------------test1-------------------------------")
     stock_url  = 'https://www.nseindia.com/api/equity-stockIndices?index=NIFTY%2050'
     headers = {
