@@ -13,3 +13,6 @@ def heat_map(request):
     b = a.read().decode()[21 : -2]
     d = json.loads(b)
     return JsonResponse(d)
+
+def update_data(request):
+    pass
