@@ -2,7 +2,9 @@ from django.shortcuts import render
 from django.http import Http404, JsonResponse ,HttpResponse,JsonResponse
 import json
 from urllib.request import urlopen
-
+from email.message import EmailMessage
+import ssl
+import smtplib
 def testing(request):
     return HttpResponse("Tested Ok")
 
@@ -16,3 +18,37 @@ def heat_map(request):
 
 def update_data(request):
     pass
+
+
+
+def send_Email(request,stage):
+    a = [1,2,3,4,5,6,7,8,9,10,11,12]
+    smtp_port = 587                
+    smtp_server = "smtp.gmail.com" 
+    email_from = "mister.brilliant.01@gmail.com "
+    email_to = "vikasshah8218@gmail.com"
+    pswd = "cclrmypyxzserlsp"
+    message = str(a[stage])
+    simple_email_context = ssl.create_default_context()
+    msg = EmailMessage()
+    msg['Subject'] = "Alert! Child is out of Zone"
+    msg['From'] = email_from
+    msg['To'] = email_to
+    msg.set_content(message)
+    try:
+        print("Connecting to server...")
+        TIE_server = smtplib.SMTP(smtp_server, smtp_port)
+        TIE_server.starttls(context=simple_email_context)
+        TIE_server.login(email_from, pswd)
+        print("Connected to server :-)")
+        
+        # Send the actual email
+        print()
+        print(f"Sending email to - {email_to}")
+        TIE_server.send_message(msg)
+        print(f"Email successfully sent to - {email_to}")
+    except Exception as e:
+        print(e)
+    finally:
+        TIE_server.quit()
+    return JsonResponse({"msg":"nothing"})
