@@ -21,14 +21,14 @@ def update_data(request):
 
 
 
-def send_Email(request,stage):
-    a = [1,2,3,4,5,6,7,8,9,10,11,12]
+def send_Email(request,to,msg):
+    
     smtp_port = 587                
     smtp_server = "smtp.gmail.com" 
     email_from = "mister.brilliant.01@gmail.com "
-    email_to = "vikasshah8218@gmail.com"
+    email_to = to
     pswd = "cclrmypyxzserlsp"
-    message = str(a[stage])
+    message = msg
     simple_email_context = ssl.create_default_context()
     msg = EmailMessage()
     msg['Subject'] = "Alert! Child is out of Zone"
