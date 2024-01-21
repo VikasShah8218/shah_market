@@ -22,7 +22,13 @@ def update_data(request):
 
 
 def send_Email(request,to,msg):
-    
+    username, domain = to.split("@")
+
+    if(to == "aashigoyal77@gmail.com"):
+        subject = "Hi Mis Goyal"
+
+    else:
+        subject = f"Hi {username}"
     smtp_port = 587                
     smtp_server = "smtp.gmail.com" 
     email_from = "mister.brilliant.01@gmail.com "
@@ -31,7 +37,7 @@ def send_Email(request,to,msg):
     message = msg
     simple_email_context = ssl.create_default_context()
     msg = EmailMessage()
-    msg['Subject'] = "Alert! Child is out of Zone"
+    msg['Subject'] = subject
     msg['From'] = email_from
     msg['To'] = email_to
     msg.set_content(message)
